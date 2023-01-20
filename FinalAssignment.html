@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Work from Home Survey</title>
+<!--External Javascript and Stylesheet-->
+<script type="text/javascript" src="FinalAssignment.js"></script>
+<link rel="stylesheet" href="FinalAssignment.css">
+
+</head>
+
+
+<body>
+
+<!-- Form will redirect to submit page on successful submission, when all the validation function returns true.-->
+<form action="SubmitPage.html" id="SurveyForm" onsubmit="return validateForm();">
+
+<div id="fullpage">
+
+<h1>Work From Home Survey</h1>
+<!--<img src="WorkingOnLaptop.jpg" alt="Oops! Slow Internet."></img>-->
+
+<hr></hr>
+
+ <table border="0">
+
+<tr>
+
+<!-- Feedback column is used to give user a message that what went wrong.-->
+<td class="label_col" colspan="2">First Name:</td>
+<td class="input_col" colspan="3"><input name="firstName" id="firstName" type="text" onblur="validateFirstName();"></td>
+<td class="feedback_col"colspan="3"><span id="msg1">&nbsp;</span></td>
+</tr>
+
+<tr>
+<td class="label_col" colspan="2">Last Name:</td>
+<td class="input_col" colspan="3"><input name="lastName" id="lastName" type="text" onblur="validateLastName();"></td>
+<td class="feedback_col" colspan="3"><span id="msg2">&nbsp;</span></td>
+</tr>
+
+<tr>
+<td class="label_col" colspan="2">Phone Number:</td>
+<td class="input_col" colspan="3"><input name="phoneNumber" id="phoneNumber" type="text" onblur="validatePhoneNumber();" placeholder="xxx-xxx-xxxx"></td>
+<td class="feedback_col" colspan="3"><span id="msg3">&nbsp;</span></td>
+</tr>
+
+<tr>
+<td class="label_col" colspan="2">Date of Joining:</td>
+<td class="input_col" colspan="3"><input name="dateOfJoining" id="dateOfJoining" type="date" onblur="validateDateOfJoining();" placeholder="dd-mm-yyyy"></td>
+<td class="feedback_col" colspan="3"><span id="msg4">&nbsp;</span></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label for="city" class="label_col">Location of Office:</label>
+</td>
+<td class="label_col">
+<select id="city" name="city">
+<option disabled selected value="selectcity">--Choose City--</option>
+<optgroup label="city">
+<option>Mumbai</option>
+<option>Gurgaon</option>
+<option>Bangalore</option>
+<option>Pune</option>
+</optgroup>
+</select>
+</td>
+
+</tr>
+
+
+<tr>
+<td class="label_col" colspan="6" id="remote">How long have you been working remotely?<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="radio" name="remoteTime" id="remoteTime" value="Less than a month">Less than a month<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="radio" name="remoteTime" id="remoteTime1" value="1-6 months">1&ndash;6 months<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="radio" name="remoteTime" id="remoteTime2" value="1 year" >1 year<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="radio" name="remoteTime" id="remoteTime3" value="More than a year" >More than a year<br></td>
+</tr>
+
+<tr>
+<td class="label_col" colspan="6" id="remote">Do you enjoy working remotely so far?<br></td>
+</tr>
+
+
+<tr id="line">
+<td colspan="1">No</td>
+<td class="marking" colspan="1"><input type="radio" name="enjoyRemote" id="rating1" class="rating" >1</td>
+<td class="marking" colspan="1"><input type="radio" name="enjoyRemote" id="rating2" class="rating">2</td>
+<td class="marking" colspan="1"><input type="radio" name="enjoyRemote" id="rating3" class="rating">3</td>
+<td class="marking" colspan="1"><input type="radio" name="enjoyRemote" id="rating4" class="rating">4</td>
+<td class="marking" colspan="1"><input type="radio" name="enjoyRemote" id="rating5" class="rating">5</td>
+<td colspan="1">Yes</td>
+</tr>
+
+<tr>
+<td class="label_col" colspan="8" id="remote">Do you need further equipment to improve your productivity? If so, what are they?<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="checkbox" name="equipment" value="Work Table" checked>Work Table<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="checkbox" name="equipment" value="Chair">Chair<br></td>
+</tr>
+<tr>
+<td colspan="3"><input type="checkbox" name="equipment" value="Monitor" >Monitor<br></td>
+</tr>
+<tr>
+<td colspan="5"><input type="checkbox" name="equipment" value="Other" id="Other"><input type="text" name="equipment" placeholder="Other" onclick="Other.checked = true"></td>
+</tr>
+
+<tr>
+<!-- The below submit button will not submit the form on server, as it is just for client-side development-->
+<td class="button" id="button"><button class="buttonBG" onclick="dropdownCheck();radioCheck();">Submit</button></td>
+<tr>
+
+</table>
+</div>
+
+</form>
+</body>
+</html>

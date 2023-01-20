@@ -1,0 +1,107 @@
+/* Selectors */
+h1{
+	text-align:center;
+}
+
+hr {
+	max-width: 600px;
+}
+
+body {
+	background-color: #FFF;
+	color: #000;
+	font-family: "Times New Roman", Times, serif;
+	font-size: large;
+	background-image: url("WorkingOnLaptop.jpg");
+	background-size: cover;
+	background-position: left;
+}
+
+
+form {
+    background-color: #fff;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+	opacity: 0.9; 
+}
+
+table {
+	width: 500px;
+	table-layout: fixed;
+	position: center;
+	margin-left: auto;  
+    margin-right: auto;  
+    border: 10px 10px;
+}
+
+td {
+	vertical-align: top;
+	padding: 5px;
+	word-wrap: break-word; 
+}
+
+
+
+/* Classes and IDs */
+
+#fullpage{
+	margin: 100px;
+}
+
+#line{
+	 border-bottom: 1px solid;
+}
+
+#remote{
+	padding-top: 20px;
+}
+
+
+.label_col{
+	text-align: left;
+	font-weight: 600;
+	color: #4B4B4B;
+	width: 150px;
+}
+
+.input_col{
+	text-align: left;
+}
+
+.feedback_col{
+	text-align: center;
+	vertical-align: middle;
+	color: LightGray;
+	font-size: small;
+}
+
+.button{
+	text-align: center;
+	transition-duration: 0.4s;
+}
+
+.buttonBG{
+    background-color: #eee ; /* Gray background */
+    border: 1px solid #ddd; /* Dark grey border */
+    color: #333; /* Black text color */
+    font-size: 1em; /* Size of text */
+    padding: 8px 8px; /* Distance between text and border */
+	margin-left: 300%;
+	margin-top: 30%;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* when user brings the mouse cursor over the submit button, it changes it's color.*/
+.buttonBG:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.marking{
+	padding: 1px;
+	margin-top: -1px;
+	align-items: center;
+    vertical-align: middle;
+}
